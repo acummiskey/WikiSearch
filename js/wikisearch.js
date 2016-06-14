@@ -33,16 +33,18 @@ console.log(wiki);
 });
 setInterval(function() {
 
-document.getElementById("input").onclick = function() {toggleIcon()};
+document.getElementById("input").onclick = toggleIcon()
 
-
+function toggleIcon(){
+  var test = $('#input').val();
   if ($(input).is(":focus")) {
  $( "#icon" ).hide();
  }
- else {
+ else if (!test) {
 $( "#icon" ).show();
 }
-}, 1);
+}
+});
 
 
 
