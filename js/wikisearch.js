@@ -2,7 +2,12 @@ $(document).ready(function() {
 
 
 $('#put').on('submit', function(e) {
+$( ".list-group-item" ).remove()
+//$("a").removeClass("ref")
+
+
    e.preventDefault();
+
   val = $('#input').val();
   if (!val) {
         showError('Please search for something first!');
@@ -24,9 +29,11 @@ $('#put').on('submit', function(e) {
               var topic = wiki[1]
               var snip = wiki[2]
               var url = wiki[3]
-console.log(wiki);
-              var resultTitle = '<h3 class="title">' + snip[1] + '</h3>';
-              $(".results").append(resultTitle);
+
+            for (i = 0; i < topic.length; i++){
+              var resultTitle = '<a class="ref" href='+url[i]+'>'+'<li class="list-group-item animated bounceInDown" id="list">' + '<b>' +topic[i] + '- '+ '</b>' + snip[i] +'</li>'+'</a>';
+              $(".listgroup").append(resultTitle);
+            };
             }
         });
       }
