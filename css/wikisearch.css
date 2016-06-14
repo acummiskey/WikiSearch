@@ -1,5 +1,7 @@
 body{
   background-color: #0f9f73;
+  height:100%;
+  width:100%;
 }
 .container {
  height: 100%
@@ -9,7 +11,7 @@ body{
 @media (min-width: 1200px){
   .container{
     margin: auto;
-    max-width: 800px;
+    //max-width: 800px;
   }
 #title{
       top: 18%;
@@ -34,10 +36,13 @@ text-align: center;
 }
 
 .glyphicon{
-  top:50%;
-  left:47%;
+  position: absolute;
+  margin-top:35%;
+  top:55%;
+  left: 45%;
   font-size: 6em;
   z-index: 1;
+  margin: auto;
 }
 
 }
@@ -86,14 +91,20 @@ font-size: 3.6em;
 
 
 }
+
+}
+
+#ic{
+  position: absolute;
+  transform: translate(0px, -50px);
+  left: 45%;
+  right: -55%;
+}
 .glyphicon{
-   top:45%;
-  margin-left: 80%;
   font-size: 3em;
+  max-width: 100%;
+  max-height: 100%;
 }
-}
-
-
 input{
 outline-width: 0;
 }

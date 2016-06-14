@@ -31,9 +31,17 @@ console.log(wiki);
         });
       }
 });
+document.getElementById("icon").onclick = focus()
+
+$( "#icon" ).click(function() {
+  $( "#input" ).focus();
+});
+
+
 setInterval(function() {
 
 document.getElementById("input").onclick = toggleIcon()
+
 
 function toggleIcon(){
   var test = $('#input').val();
