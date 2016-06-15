@@ -31,7 +31,7 @@ $( ".list-group-item" ).remove()
               var url = wiki[3]
 
             for (i = 0; i < topic.length; i++){
-              var resultTitle = '<a class="ref" href='+url[i]+'>'+'<li class="list-group-item animated bounceInDown" id="list">' + '<b>' +topic[i] + '- '+ '</b>' + snip[i] +'</li>'+'</a>';
+              var resultTitle = '<a class="ref" href='+url[i]+'>'+'<li class="list-group-item animated zoomInDown" id="list">' + '<b>' +topic[i] + '- '+ '</b>' + snip[i] +'</li>'+'</a>';
               $(".listgroup").append(resultTitle);
             };
             }
